@@ -7,7 +7,7 @@ class CreateCorpora < ActiveRecord::Migration[7.1]
       t.uuid :uuid, null: false, index: { unique: true }
       t.uuid :user_uuid, comment: 'Owner'
       t.string :title, null: false
-      t.integer :text_sample_count, null: false, default: 0, comment: 'Counter cache for samples'
+      t.integer :text_samples_count, null: false, default: 0, comment: 'Counter cache for samples'
       t.timestamps
     end
 

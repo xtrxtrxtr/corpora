@@ -11,5 +11,7 @@
 class Corpus < ApplicationRecord
   include HasUuid
 
+  has_many :text_samples, dependent: :delete_all
+
   validates :title, presence: true, length: { minimum: 1, maximum: 250 }, uniqueness: { scope: :user_uuid }
 end

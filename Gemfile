@@ -1,19 +1,21 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-ruby "3.3.0"
+source 'https://rubygems.org'
 
-gem "pg", "~> 1.1"
-gem "puma", ">= 5.0"
-gem "rails", "~> 7.1.3", ">= 7.1.3.2"
+ruby '3.3.0'
+
+gem 'pg', '~> 1.1'
+gem 'puma', '>= 5.0'
+gem 'rails', '~> 7.1.3', '>= 7.1.3.2'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem 'tzinfo-data', platforms: %i[windows jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
+gem 'bootsnap', require: false
 gem 'dotenv-rails', '~> 3.1'
 gem 'jbuilder'
 gem 'kaminari', '~> 1.2'
@@ -38,4 +40,3 @@ group :development do
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
 end
-

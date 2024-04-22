@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Corpus, type: :model do
+RSpec.describe Corpus do
   before do
     create(:corpus, user_uuid: SecureRandom.uuid)
   end

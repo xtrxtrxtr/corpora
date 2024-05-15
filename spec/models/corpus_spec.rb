@@ -10,7 +10,10 @@ RSpec.describe Corpus do
   it_behaves_like 'has_uuid'
 
   it { is_expected.to have_many(:text_samples) }
-  it { is_expected.to validate_presence_of(:title) }
-  it { is_expected.to validate_length_of(:title).is_at_least(1).is_at_most(250) }
-  it { is_expected.to validate_uniqueness_of(:title).scoped_to(:user_uuid) }
+
+  describe 'validation' do
+    it { is_expected.to validate_presence_of(:title) }
+    it { is_expected.to validate_length_of(:title).is_at_least(1).is_at_most(250) }
+    it { is_expected.to validate_uniqueness_of(:title).scoped_to(:user_uuid) }
+  end
 end
